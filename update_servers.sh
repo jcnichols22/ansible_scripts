@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd ~/Ansible || exit 1
-ansible-playbook playbooks/update_servers.yml
+ansible-playbook --user=ansible playbooks/update_servers.yml
