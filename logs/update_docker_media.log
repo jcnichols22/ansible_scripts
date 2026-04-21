@@ -1,0 +1,231 @@
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.102]
+
+TASK [Pull latest image for {{ item }}] ****************************************
+changed: [192.168.0.102] => (item=prowlarr)
+changed: [192.168.0.102] => (item=bazarr)
+changed: [192.168.0.102] => (item=sonarr)
+changed: [192.168.0.102] => (item=radarr)
+changed: [192.168.0.102] => (item=lazylibrarian)
+failed: [192.168.0.102] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull readarr", "delta": "0:00:02.402924", "end": "2026-01-26 04:00:18.137613", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-01-26 04:00:15.734689", "stderr": " readarr Pulling \nno matching manifest for linux/amd64 in the manifest list entries", "stderr_lines": [" readarr Pulling ", "no matching manifest for linux/amd64 in the manifest list entries"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.102] => (item=jellyfin)
+changed: [192.168.0.102] => (item=jellyseerr)
+changed: [192.168.0.102] => (item=qbittorrent)
+changed: [192.168.0.102] => (item=tdarr)
+changed: [192.168.0.102] => (item=tdarr-node)
+changed: [192.168.0.102] => (item=arm-rippers)
+changed: [192.168.0.102] => (item=calibre)
+changed: [192.168.0.102] => (item=calibre-web)
+...ignoring
+
+TASK [Recreate and start container for {{ item }}] *****************************
+changed: [192.168.0.102] => (item=prowlarr)
+changed: [192.168.0.102] => (item=bazarr)
+changed: [192.168.0.102] => (item=sonarr)
+changed: [192.168.0.102] => (item=radarr)
+changed: [192.168.0.102] => (item=lazylibrarian)
+changed: [192.168.0.102] => (item=readarr)
+changed: [192.168.0.102] => (item=jellyfin)
+changed: [192.168.0.102] => (item=jellyseerr)
+changed: [192.168.0.102] => (item=qbittorrent)
+changed: [192.168.0.102] => (item=tdarr)
+changed: [192.168.0.102] => (item=tdarr-node)
+changed: [192.168.0.102] => (item=arm-rippers)
+changed: [192.168.0.102] => (item=calibre)
+changed: [192.168.0.102] => (item=calibre-web)
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.102]
+
+TASK [Pull latest image for {{ item }}] ****************************************
+changed: [192.168.0.102] => (item=prowlarr)
+changed: [192.168.0.102] => (item=bazarr)
+changed: [192.168.0.102] => (item=sonarr)
+changed: [192.168.0.102] => (item=radarr)
+failed: [192.168.0.102] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull lazylibrarian", "delta": "0:00:07.741720", "end": "2026-02-02 04:00:32.363981", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-02-02 04:00:24.622261", "stderr": " lazylibrarian Pulling \n lazylibrarian Error toomanyrequests: retry-after: 504.314µs, allowed: 44000/minute\nError response from daemon: toomanyrequests: retry-after: 504.314µs, allowed: 44000/minute", "stderr_lines": [" lazylibrarian Pulling ", " lazylibrarian Error toomanyrequests: retry-after: 504.314µs, allowed: 44000/minute", "Error response from daemon: toomanyrequests: retry-after: 504.314µs, allowed: 44000/minute"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.102] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull readarr", "delta": "0:00:10.016704", "end": "2026-02-02 04:00:42.654320", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-02-02 04:00:32.637616", "stderr": " readarr Pulling \nno matching manifest for linux/amd64 in the manifest list entries", "stderr_lines": [" readarr Pulling ", "no matching manifest for linux/amd64 in the manifest list entries"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.102] => (item=jellyfin)
+changed: [192.168.0.102] => (item=jellyseerr)
+changed: [192.168.0.102] => (item=qbittorrent)
+changed: [192.168.0.102] => (item=tdarr)
+changed: [192.168.0.102] => (item=tdarr-node)
+changed: [192.168.0.102] => (item=arm-rippers)
+changed: [192.168.0.102] => (item=calibre)
+changed: [192.168.0.102] => (item=calibre-web)
+...ignoring
+
+TASK [Recreate and start container for {{ item }}] *****************************
+changed: [192.168.0.102] => (item=prowlarr)
+changed: [192.168.0.102] => (item=bazarr)
+changed: [192.168.0.102] => (item=sonarr)
+changed: [192.168.0.102] => (item=radarr)
+changed: [192.168.0.102] => (item=lazylibrarian)
+changed: [192.168.0.102] => (item=readarr)
+changed: [192.168.0.102] => (item=jellyfin)
+changed: [192.168.0.102] => (item=jellyseerr)
+changed: [192.168.0.102] => (item=qbittorrent)
+changed: [192.168.0.102] => (item=tdarr)
+changed: [192.168.0.102] => (item=tdarr-node)
+changed: [192.168.0.102] => (item=arm-rippers)
+changed: [192.168.0.102] => (item=calibre)
+changed: [192.168.0.102] => (item=calibre-web)
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.102]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:s3/Yrv3q4qDCuxbh7HGJGE5GXf7Ss9NkJSShMKkwR4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:9\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.102'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\njosh@192.168.0.102: Permission denied (publickey,password).", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.102]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:s3/Yrv3q4qDCuxbh7HGJGE5GXf7Ss9NkJSShMKkwR4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:9\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.102'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\njosh@192.168.0.102: Permission denied (publickey,password).", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.34]
+
+TASK [Pull latest image for {{ item }}] ****************************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull lazylibrarian", "delta": "0:00:00.079216", "end": "2026-02-23 04:00:37.973152", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:00:37.893936", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull readarr", "delta": "0:00:00.075033", "end": "2026-02-23 04:00:38.265406", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:00:38.190373", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull jellyseerr", "delta": "0:00:00.076587", "end": "2026-02-23 04:00:48.669849", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:00:48.593262", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+changed: [192.168.0.34] => (item=tdarr-node)
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre", "delta": "0:00:00.075719", "end": "2026-02-23 04:01:07.842729", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:07.767010", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre-web", "delta": "0:00:00.076217", "end": "2026-02-23 04:01:08.197343", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:08.121126", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [Recreate and start container for {{ item }}] *****************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d lazylibrarian", "delta": "0:00:00.078117", "end": "2026-02-23 04:01:23.740482", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:23.662365", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d readarr", "delta": "0:00:00.077288", "end": "2026-02-23 04:01:24.035840", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:23.958552", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d jellyseerr", "delta": "0:00:00.075975", "end": "2026-02-23 04:01:28.386947", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:28.310972", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+changed: [192.168.0.34] => (item=tdarr-node)
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre", "delta": "0:00:00.076441", "end": "2026-02-23 04:01:35.833557", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:35.757116", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre-web", "delta": "0:00:00.075011", "end": "2026-02-23 04:01:36.171370", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-02-23 04:01:36.096359", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+PLAY RECAP *********************************************************************
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.34]
+
+TASK [Pull latest image for {{ item }}] ****************************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull lazylibrarian", "delta": "0:00:00.152339", "end": "2026-03-02 04:00:39.856846", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:00:39.704507", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull readarr", "delta": "0:00:00.139600", "end": "2026-03-02 04:00:40.417695", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:00:40.278095", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull jellyseerr", "delta": "0:00:00.146784", "end": "2026-03-02 04:00:52.564673", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:00:52.417889", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+failed: [192.168.0.34] (item=tdarr-node) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull tdarr-node", "delta": "0:00:00.123206", "end": "2026-03-02 04:01:55.350871", "item": "tdarr-node", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:01:55.227665", "stderr": "no such service: tdarr-node", "stderr_lines": ["no such service: tdarr-node"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre", "delta": "0:00:00.122180", "end": "2026-03-02 04:01:58.248607", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:01:58.126427", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre-web", "delta": "0:00:00.122751", "end": "2026-03-02 04:01:58.806546", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:01:58.683795", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [Recreate and start container for {{ item }}] *****************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d lazylibrarian", "delta": "0:00:00.163493", "end": "2026-03-02 04:02:09.317885", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:09.154392", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d readarr", "delta": "0:00:00.177352", "end": "2026-03-02 04:02:09.951755", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:09.774403", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d jellyseerr", "delta": "0:00:00.207462", "end": "2026-03-02 04:02:15.412050", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:15.204588", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+failed: [192.168.0.34] (item=tdarr-node) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d tdarr-node", "delta": "0:00:00.082162", "end": "2026-03-02 04:02:28.294684", "item": "tdarr-node", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:28.212522", "stderr": "no such service: tdarr-node", "stderr_lines": ["no such service: tdarr-node"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre", "delta": "0:00:00.072542", "end": "2026-03-02 04:02:31.061261", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:30.988719", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre-web", "delta": "0:00:00.073425", "end": "2026-03-02 04:02:31.388603", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-03-02 04:02:31.315178", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+PLAY RECAP *********************************************************************
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+
+
+PLAY [media_server] ************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.34]
+
+TASK [Pull latest image for {{ item }}] ****************************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull lazylibrarian", "delta": "0:00:00.244649", "end": "2026-03-09 04:00:51.901079", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:00:51.656430", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull readarr", "delta": "0:00:00.228198", "end": "2026-03-09 04:00:52.686662", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:00:52.458464", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull jellyseerr", "delta": "0:00:00.173185", "end": "2026-03-09 04:01:07.450114", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:01:07.276929", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+failed: [192.168.0.34] (item=tdarr-node) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull tdarr-node", "delta": "0:00:00.138503", "end": "2026-03-09 04:02:07.135457", "item": "tdarr-node", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:06.996954", "stderr": "no such service: tdarr-node", "stderr_lines": ["no such service: tdarr-node"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre", "delta": "0:00:00.133031", "end": "2026-03-09 04:02:10.326976", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:10.193945", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose pull calibre-web", "delta": "0:00:00.147785", "end": "2026-03-09 04:02:10.831078", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:10.683293", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [Recreate and start container for {{ item }}] *****************************
+changed: [192.168.0.34] => (item=prowlarr)
+changed: [192.168.0.34] => (item=bazarr)
+changed: [192.168.0.34] => (item=sonarr)
+changed: [192.168.0.34] => (item=radarr)
+failed: [192.168.0.34] (item=lazylibrarian) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d lazylibrarian", "delta": "0:00:00.171335", "end": "2026-03-09 04:02:30.478481", "item": "lazylibrarian", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:30.307146", "stderr": "no such service: lazylibrarian", "stderr_lines": ["no such service: lazylibrarian"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=readarr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d readarr", "delta": "0:00:00.204284", "end": "2026-03-09 04:02:31.197160", "item": "readarr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:30.992876", "stderr": "no such service: readarr", "stderr_lines": ["no such service: readarr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=jellyfin)
+failed: [192.168.0.34] (item=jellyseerr) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d jellyseerr", "delta": "0:00:00.168571", "end": "2026-03-09 04:02:37.337104", "item": "jellyseerr", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:37.168533", "stderr": "no such service: jellyseerr", "stderr_lines": ["no such service: jellyseerr"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=qbittorrent)
+changed: [192.168.0.34] => (item=tdarr)
+failed: [192.168.0.34] (item=tdarr-node) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d tdarr-node", "delta": "0:00:00.137925", "end": "2026-03-09 04:02:50.509864", "item": "tdarr-node", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:50.371939", "stderr": "no such service: tdarr-node", "stderr_lines": ["no such service: tdarr-node"], "stdout": "", "stdout_lines": []}
+changed: [192.168.0.34] => (item=arm-rippers)
+failed: [192.168.0.34] (item=calibre) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre", "delta": "0:00:00.089475", "end": "2026-03-09 04:02:53.215080", "item": "calibre", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:53.125605", "stderr": "no such service: calibre", "stderr_lines": ["no such service: calibre"], "stdout": "", "stdout_lines": []}
+failed: [192.168.0.34] (item=calibre-web) => {"ansible_loop_var": "item", "changed": true, "cmd": "docker compose up -d calibre-web", "delta": "0:00:00.079069", "end": "2026-03-09 04:02:53.526851", "item": "calibre-web", "msg": "non-zero return code", "rc": 1, "start": "2026-03-09 04:02:53.447782", "stderr": "no such service: calibre-web", "stderr_lines": ["no such service: calibre-web"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+PLAY RECAP *********************************************************************
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=2   
+

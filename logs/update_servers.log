@@ -1,0 +1,164 @@
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.196]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@192.168.0.196: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.23]
+ok: [192.168.0.102]
+ok: [192.168.0.157]
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.157]
+changed: [192.168.0.23]
+changed: [192.168.0.102]
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.23]
+ok: [192.168.0.157]
+ok: [192.168.0.102]
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.157              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.196              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.23               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.196]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@192.168.0.196: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.157]
+ok: [192.168.0.23]
+ok: [192.168.0.102]
+
+TASK [Update package cache] ****************************************************
+changed: [192.168.0.157]
+changed: [192.168.0.23]
+changed: [192.168.0.102]
+
+TASK [Upgrade all packages] ****************************************************
+changed: [192.168.0.23]
+changed: [192.168.0.157]
+changed: [192.168.0.102]
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.157              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.196              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.23               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.102]
+fatal: [192.168.0.157]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.157 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.23]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.23 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.196]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.196 port 22: No route to host", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+changed: [192.168.0.102]
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.102]
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.157              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.196              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.23               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.102]
+fatal: [192.168.0.196]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.196 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.157]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.157 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.23]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.23 port 22: No route to host", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+fatal: [192.168.0.102]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://mirror.mariadb.org/repo/12.2.1/debian/dists/trixie/InRelease., E:The repository 'http://mirror.mariadb.org/repo/12.2.1/debian trixie Release' no longer has a Release file."}
+
+PLAY RECAP *********************************************************************
+192.168.0.102              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.157              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.196              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.23               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.32]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:wSQ9R2NoeRMgI32jYAtl8H++e7zt43CLbo1+Z+xLK4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:31\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.32'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.32: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.31]
+ok: [192.168.0.34]
+ok: [192.168.0.30]
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.30]
+changed: [192.168.0.31]
+changed: [192.168.0.34]
+
+TASK [Upgrade all packages] ****************************************************
+changed: [192.168.0.30]
+changed: [192.168.0.31]
+changed: [192.168.0.34]
+
+PLAY RECAP *********************************************************************
+192.168.0.30               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.32]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:wSQ9R2NoeRMgI32jYAtl8H++e7zt43CLbo1+Z+xLK4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:31\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.32'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.32: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.31]
+ok: [192.168.0.30]
+ok: [192.168.0.34]
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.30]
+changed: [192.168.0.31]
+changed: [192.168.0.34]
+
+TASK [Upgrade all packages] ****************************************************
+changed: [192.168.0.34]
+changed: [192.168.0.31]
+changed: [192.168.0.30]
+
+PLAY RECAP *********************************************************************
+192.168.0.30               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update Ubuntu servers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.32]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:wSQ9R2NoeRMgI32jYAtl8H++e7zt43CLbo1+Z+xLK4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:31\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.32'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.32: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.31]
+ok: [192.168.0.30]
+ok: [192.168.0.34]
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.30]
+changed: [192.168.0.31]
+changed: [192.168.0.34]
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.31]
+ok: [192.168.0.30]
+changed: [192.168.0.34]
+
+PLAY RECAP *********************************************************************
+192.168.0.30               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.34               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

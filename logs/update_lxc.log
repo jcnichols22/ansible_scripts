@@ -1,0 +1,479 @@
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.108]
+ok: [192.168.0.118]
+ok: [192.168.0.21]
+ok: [192.168.0.121]
+ok: [192.168.0.11]
+fatal: [192.168.0.32]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [192.168.0.38]: FAILED! => {"msg": "Missing sudo password"}
+ok: [192.168.0.35]
+ok: [192.168.0.31]
+ok: [192.168.0.45]
+ok: [192.168.0.44]
+ok: [192.168.0.46]
+ok: [192.168.0.148]
+ok: [192.168.0.27]
+ok: [192.168.0.61]
+ok: [192.168.0.101]
+ok: [192.168.0.111]
+ok: [192.168.0.100]
+ok: [192.168.0.116]
+ok: [192.168.0.128]
+ok: [192.168.0.130]
+ok: [192.168.0.49]
+
+TASK [Update package cache] ****************************************************
+changed: [192.168.0.108]
+ok: [192.168.0.121]
+ok: [192.168.0.35]
+ok: [192.168.0.11]
+ok: [192.168.0.44]
+ok: [192.168.0.46]
+ok: [192.168.0.118]
+ok: [192.168.0.31]
+ok: [192.168.0.45]
+ok: [192.168.0.61]
+ok: [192.168.0.21]
+ok: [192.168.0.111]
+ok: [192.168.0.100]
+changed: [192.168.0.148]
+ok: [192.168.0.128]
+ok: [192.168.0.130]
+changed: [192.168.0.49]
+ok: [192.168.0.101]
+ok: [192.168.0.27]
+ok: [192.168.0.116]
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.108]
+ok: [192.168.0.118]
+ok: [192.168.0.11]
+ok: [192.168.0.35]
+ok: [192.168.0.31]
+ok: [192.168.0.44]
+ok: [192.168.0.21]
+ok: [192.168.0.46]
+ok: [192.168.0.27]
+ok: [192.168.0.45]
+ok: [192.168.0.148]
+ok: [192.168.0.101]
+ok: [192.168.0.100]
+ok: [192.168.0.61]
+ok: [192.168.0.116]
+ok: [192.168.0.121]
+ok: [192.168.0.111]
+ok: [192.168.0.49]
+ok: [192.168.0.128]
+ok: [192.168.0.130]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.101              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.11               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.116              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.118              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.121              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.128              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.148              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.21               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.27               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.35               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.38               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.44               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.45               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.46               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.61               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.118]
+ok: [192.168.0.11]
+ok: [192.168.0.108]
+fatal: [192.168.0.35]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.35 port 22: Connection refused", "unreachable": true}
+ok: [192.168.0.21]
+ok: [192.168.0.121]
+fatal: [192.168.0.32]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [192.168.0.38]: FAILED! => {"msg": "Missing sudo password"}
+ok: [192.168.0.44]
+ok: [192.168.0.31]
+ok: [192.168.0.46]
+ok: [192.168.0.27]
+ok: [192.168.0.148]
+fatal: [192.168.0.45]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.45 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.101]
+fatal: [192.168.0.61]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.61 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.111]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.111 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.116]
+ok: [192.168.0.130]
+fatal: [192.168.0.100]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.100 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.49]
+fatal: [192.168.0.128]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.128 port 22: No route to host", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.118]
+changed: [192.168.0.108]
+changed: [192.168.0.11]
+changed: [192.168.0.121]
+changed: [192.168.0.44]
+changed: [192.168.0.27]
+changed: [192.168.0.101]
+ok: [192.168.0.116]
+fatal: [192.168.0.21]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+changed: [192.168.0.49]
+fatal: [192.168.0.31]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'https://repos.azul.com/zulu/deb stable Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://security.debian.org/debian-security bookworm-security Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://deb.debian.org/debian bookworm Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://deb.debian.org/debian bookworm-updates Release' no longer has a Release file."}
+fatal: [192.168.0.148]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at https://packages.wazuh.com/4.x/apt/dists/stable/InRelease., E:The repository 'https://packages.wazuh.com/4.x/apt stable Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://security.debian.org/debian-security/dists/bookworm-security/InRelease., W:Repositories should provide a clear-signed InRelease file, but none found at http://security.debian.org/dists/trixie-security/InRelease., E:The repository 'http://security.debian.org/debian-security bookworm-security Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://security.debian.org trixie-security Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://deb.debian.org/debian/dists/bookworm/InRelease., W:Repositories should provide a clear-signed InRelease file, but none found at http://deb.debian.org/debian/dists/bookworm-updates/InRelease., W:Repositories should provide a clear-signed InRelease file, but none found at http://deb.debian.org/debian/dists/trixie/InRelease., W:Repositories should provide a clear-signed InRelease file, but none found at http://deb.debian.org/debian/dists/trixie-updates/InRelease., E:The repository 'http://deb.debian.org/debian bookworm Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://deb.debian.org/debian bookworm-updates Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://deb.debian.org/debian trixie Release' no longer has a Release file., W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., E:The repository 'http://deb.debian.org/debian trixie-updates Release' no longer has a Release file."}
+fatal: [192.168.0.46]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.130]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.44]
+ok: [192.168.0.108]
+ok: [192.168.0.27]
+ok: [192.168.0.101]
+changed: [192.168.0.121]
+ok: [192.168.0.49]
+changed: [192.168.0.11]
+changed: [192.168.0.118]
+changed: [192.168.0.116]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.101              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.11               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.116              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.118              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.121              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.128              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.148              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.21               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.27               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.35               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.38               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.44               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.45               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.46               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.61               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.121]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:logxSlqzDW2dixSfVsVk+GkIjW4R+V32ZNYFThOspqo.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:29\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.121'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.121: Permission denied (publickey,password).", "unreachable": true}
+fatal: [192.168.0.32]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:wSQ9R2NoeRMgI32jYAtl8H++e7zt43CLbo1+Z+xLK4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:31\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.32'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.32: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.108]
+fatal: [192.168.0.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.11 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.21]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.21 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.118]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.118 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.38]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.38 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.35]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.35 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.31]
+fatal: [192.168.0.46]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.46 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.45]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.45 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.44]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.44 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.101]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.101 port 22: Connection refused", "unreachable": true}
+ok: [192.168.0.111]
+fatal: [192.168.0.116]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:VMy+ib3aX+byebnk6BDFz2J3HvqLhE1C9o6AH0BhTF0.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:74\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.116'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.116: Permission denied (publickey,password).", "unreachable": true}
+fatal: [192.168.0.27]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.27 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.100]
+fatal: [192.168.0.148]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.148 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.61]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.61 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.49]
+fatal: [192.168.0.128]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.128 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.130]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.130 port 22: No route to host", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+changed: [192.168.0.111]
+ok: [192.168.0.108]
+ok: [192.168.0.100]
+changed: [192.168.0.31]
+changed: [192.168.0.49]
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.111]
+ok: [192.168.0.31]
+ok: [192.168.0.49]
+ok: [192.168.0.100]
+changed: [192.168.0.108]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.101              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.11               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.116              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.118              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.121              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.128              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.148              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.21               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.27               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.35               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.38               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.44               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.45               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.46               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.61               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [192.168.0.121]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:logxSlqzDW2dixSfVsVk+GkIjW4R+V32ZNYFThOspqo.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:29\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.121'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.121: Permission denied (publickey,password).", "unreachable": true}
+fatal: [192.168.0.32]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:wSQ9R2NoeRMgI32jYAtl8H++e7zt43CLbo1+Z+xLK4Q.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:31\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.32'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.32: Permission denied (publickey,password).", "unreachable": true}
+ok: [192.168.0.108]
+fatal: [192.168.0.21]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.21 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.118]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.118 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.11 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.38]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.38 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.35]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.35 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.31]
+fatal: [192.168.0.45]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.45 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.44]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.44 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.46]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.46 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.101]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.101 port 22: Connection refused", "unreachable": true}
+ok: [192.168.0.111]
+fatal: [192.168.0.116]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:VMy+ib3aX+byebnk6BDFz2J3HvqLhE1C9o6AH0BhTF0.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:74\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.116'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.116: Permission denied (publickey,password).", "unreachable": true}
+fatal: [192.168.0.128]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:ebDvuk20HxK6NwAZlABeJie+OjEEoOz0ZxNxuuWnF1U.\r\nPlease contact your system administrator.\r\nAdd correct host key in /home/josh/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /home/josh/.ssh/known_hosts:76\r\n  remove with:\r\n  ssh-keygen -f '/home/josh/.ssh/known_hosts' -R '192.168.0.128'\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nansible@192.168.0.128: Permission denied (publickey,password).", "unreachable": true}
+fatal: [192.168.0.27]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.27 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.148]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.148 port 22: No route to host", "unreachable": true}
+ok: [192.168.0.100]
+ok: [192.168.0.49]
+fatal: [192.168.0.61]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.61 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.130]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.130 port 22: No route to host", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.100]
+changed: [192.168.0.31]
+changed: [192.168.0.108]
+changed: [192.168.0.49]
+fatal: [192.168.0.111]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:Failed to fetch https://apt.postgresql.org/pub/repos/apt/dists/bookworm-pgdg/main/binary-amd64/Packages.bz2  File has unexpected size (408486 != 407760). Mirror sync in progress? [IP: 151.101.3.52 443]\nHashes of expected file:\n - Filesize:407760 [weak]\n - SHA256:d2dfe5e2cfb90c2849616207f72afb996dc177533b6e9acd4269b0fe18982c24\n - SHA1:c1af37094108982f088408b65755f1d7d396d930 [weak]\n - MD5Sum:24738e12adcb21b013eaeccb37e4e1d8 [weak]\nRelease file created at: Thu, 12 Feb 2026 11:13:19 +0000\n, E:Some index files failed to download. They have been ignored, or old ones used instead."}
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.108]
+ok: [192.168.0.31]
+ok: [192.168.0.49]
+ok: [192.168.0.100]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.101              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.11               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.116              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.118              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.121              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.128              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.148              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.21               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.27               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.31               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.32               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.35               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.38               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.44               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.45               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.46               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.61               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.108]
+ok: [192.168.0.113]
+ok: [192.168.0.107]
+fatal: [192.168.0.103]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [192.168.0.109]: FAILED! => {"msg": "Missing sudo password"}
+ok: [192.168.0.111]
+ok: [192.168.0.112]
+ok: [192.168.0.115]
+ok: [192.168.0.117]
+ok: [192.168.0.102]
+ok: [192.168.0.105]
+ok: [192.168.0.49]
+fatal: [192.168.0.130]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.130 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.100]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.100 port 22: Connection timed out", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.108]
+ok: [192.168.0.112]
+ok: [192.168.0.113]
+ok: [192.168.0.117]
+ok: [192.168.0.105]
+changed: [192.168.0.49]
+fatal: [192.168.0.115]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.107]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.111]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: E:Failed to fetch https://apt.postgresql.org/pub/repos/apt/dists/bookworm-pgdg/main/binary-amd64/Packages.bz2  File has unexpected size (408235 != 407760). Mirror sync in progress? [IP: 151.101.195.52 443]\nHashes of expected file:\n - Filesize:407760 [weak]\n - SHA256:d2dfe5e2cfb90c2849616207f72afb996dc177533b6e9acd4269b0fe18982c24\n - SHA1:c1af37094108982f088408b65755f1d7d396d930 [weak]\n - MD5Sum:24738e12adcb21b013eaeccb37e4e1d8 [weak]\nRelease file created at: Thu, 12 Feb 2026 11:13:19 +0000\n, E:Some index files failed to download. They have been ignored, or old ones used instead."}
+fatal: [192.168.0.102]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://mirror.mariadb.org/repo/12.2.1/debian/dists/trixie/InRelease., E:The repository 'http://mirror.mariadb.org/repo/12.2.1/debian trixie Release' no longer has a Release file."}
+
+TASK [Upgrade all packages] ****************************************************
+changed: [192.168.0.108]
+changed: [192.168.0.106]
+changed: [192.168.0.117]
+changed: [192.168.0.112]
+changed: [192.168.0.113]
+changed: [192.168.0.49]
+changed: [192.168.0.105]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.102              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.103              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.105              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.106              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.107              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.109              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.112              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.113              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.115              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.117              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.108]
+ok: [192.168.0.107]
+ok: [192.168.0.113]
+fatal: [192.168.0.103]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [192.168.0.109]: FAILED! => {"msg": "Missing sudo password"}
+ok: [192.168.0.111]
+ok: [192.168.0.112]
+ok: [192.168.0.115]
+ok: [192.168.0.117]
+ok: [192.168.0.102]
+ok: [192.168.0.105]
+ok: [192.168.0.49]
+fatal: [192.168.0.130]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.130 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.100]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.100 port 22: Connection timed out", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.108]
+ok: [192.168.0.112]
+ok: [192.168.0.117]
+ok: [192.168.0.113]
+ok: [192.168.0.105]
+changed: [192.168.0.49]
+fatal: [192.168.0.107]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.115]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.111]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.102]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://mirror.mariadb.org/repo/12.2.1/debian/dists/trixie/InRelease., E:The repository 'http://mirror.mariadb.org/repo/12.2.1/debian trixie Release' no longer has a Release file."}
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.108]
+ok: [192.168.0.106]
+ok: [192.168.0.117]
+ok: [192.168.0.105]
+ok: [192.168.0.49]
+changed: [192.168.0.112]
+changed: [192.168.0.113]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.102              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.103              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.105              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.106              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.107              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.109              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.112              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.113              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.115              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.117              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Update LXC containers] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.107]
+ok: [192.168.0.113]
+ok: [192.168.0.108]
+fatal: [192.168.0.103]: FAILED! => {"msg": "Missing sudo password"}
+fatal: [192.168.0.109]: FAILED! => {"msg": "Missing sudo password"}
+ok: [192.168.0.111]
+ok: [192.168.0.112]
+ok: [192.168.0.115]
+ok: [192.168.0.117]
+ok: [192.168.0.102]
+ok: [192.168.0.105]
+ok: [192.168.0.49]
+fatal: [192.168.0.130]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.130 port 22: No route to host", "unreachable": true}
+fatal: [192.168.0.100]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.0.100 port 22: Connection timed out", "unreachable": true}
+
+TASK [Update package cache] ****************************************************
+ok: [192.168.0.106]
+ok: [192.168.0.108]
+ok: [192.168.0.112]
+ok: [192.168.0.117]
+ok: [192.168.0.113]
+ok: [192.168.0.105]
+changed: [192.168.0.49]
+fatal: [192.168.0.107]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.115]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [192.168.0.102]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: W:Updating from such a repository can't be done securely, and is therefore disabled by default., W:See apt-secure(8) manpage for repository creation and user configuration details., W:Repositories should provide a clear-signed InRelease file, but none found at http://mirror.mariadb.org/repo/12.2.1/debian/dists/trixie/InRelease., E:The repository 'http://mirror.mariadb.org/repo/12.2.1/debian trixie Release' no longer has a Release file."}
+fatal: [192.168.0.111]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+
+TASK [Upgrade all packages] ****************************************************
+ok: [192.168.0.108]
+ok: [192.168.0.106]
+ok: [192.168.0.112]
+ok: [192.168.0.113]
+ok: [192.168.0.49]
+changed: [192.168.0.105]
+changed: [192.168.0.117]
+
+PLAY RECAP *********************************************************************
+192.168.0.100              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.102              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.103              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.105              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.106              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.107              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.108              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.109              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.111              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.112              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.113              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.115              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+192.168.0.117              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.130              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.0.49               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
